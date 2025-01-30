@@ -1,5 +1,9 @@
 //import { useEffect, useState } from 'react';
 import Header from '../components/Header';
+import Footer from '../components/Footer.jsx';
+import ScrollTec from '../components/ScrollTec.jsx';
+import Background from '../components/Background.jsx';
+
 
 function Home() {
 
@@ -14,20 +18,19 @@ function Home() {
         return () => clearTimeout(timer);
     }, []);
 
-                <div className=" initial-screen d-flex align-items-center justify-content-center ">
+                <div 
+                className=" initial-screen d-flex align-items-center justify-content-center ">
                     {/* Tela inicial de carregamento
                 </div>
     */
 
-
     return (
         <>
-
-
-            <div className="">
+            <Background>
                 <Header />
-            </div>
-
+                <ScrollTec />
+                <Footer />
+            </Background>
         </>
     )
 }

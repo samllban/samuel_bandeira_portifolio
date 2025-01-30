@@ -2,7 +2,6 @@ import gsap from "gsap";
 import { useEffect, useRef } from "react";
 import { Typed } from "react-typed";
 import NavBar from "./NavBar";
-import Background from "./Background";
 
 function Header() {
 
@@ -44,7 +43,7 @@ function Header() {
 
     return (
         <>
-            <Background>
+         
                 <section className="w-100 min-vh-100 d-flex flex-column text-center align-items-center justify-content-center pt-5">
                     <NavBar />
                     <div className="container-xl pt-5">
@@ -73,7 +72,7 @@ function Header() {
 
                     </div>
                 </section>
-            </Background>
+            
         </>
     );
 };
