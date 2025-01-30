@@ -25,6 +25,7 @@ function Header() {
         return () => typed.destroy();
     }, []);
 
+    
     useEffect(() => {
         const startInicial = () => {
             tl.fromTo(".titleSamuel",
