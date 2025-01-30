@@ -25,7 +25,7 @@ function Header() {
         return () => typed.destroy();
     }, []);
 
-    
+
     useEffect(() => {
         const startInicial = () => {
             tl.fromTo(".titleSamuel",
@@ -44,7 +44,6 @@ function Header() {
 
     return (
         <>
-         
                 <section className="w-100 min-vh-100 d-flex flex-column text-center align-items-center justify-content-center pt-5">
                     <NavBar />
                     <div className="container-xl pt-5">
