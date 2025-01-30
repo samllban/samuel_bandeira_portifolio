@@ -1,11 +1,11 @@
-import { useEffect, useState } from 'react';
-
+//import { useEffect, useState } from 'react';
+import Header from '../components/Header';
 
 function Home() {
 
-    const [loading, setLoading] = useState(true);
+    //const [loading, setLoading] = useState(true);
 
-    useEffect(() => {
+    /*useEffect(() => {
         // Simula o carregamento da tela inicial
         const timer = setTimeout(() => {
             setLoading(false);
@@ -13,17 +13,21 @@ function Home() {
 
         return () => clearTimeout(timer);
     }, []);
+
+                <div className=" initial-screen d-flex align-items-center justify-content-center ">
+                    {/* Tela inicial de carregamento
+                </div>
+    */
+
+
     return (
         <>
-            {loading ? (
-                <div className=" initial-screen d-flex align-items-center justify-content-center ">
-                    {/* Tela inicial de carregamento */}
-                </div>
-            ) : (
-                <div className="">
 
-                </div>
-            )}
+
+            <div className="">
+                <Header />
+            </div>
+
         </>
     )
 }
