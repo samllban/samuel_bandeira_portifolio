@@ -1,36 +1,43 @@
 :root {
-
   --main-gradient: radial-gradient(circle at top left, #000 20%, #001f3f 60%, #00264d 90%);
   --secondary-gradient: radial-gradient(circle at bottom right, #003366 30%, #004080 70%, #001f3f 100%);
   --overlay-gradient: linear-gradient(to bottom, #000 0%, #001f3f 15%, #000 30%, #00264d 45%, #000 60%, #003366 75%, #000 90%);
   --black: #000000;
-  --white: #ffffff;
-
-  line-height: 1.5;
-  
+  --white: #ffffff;  
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
+*{
+
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+h1,
+h2,
+h3,
+ul,
+p,
 a {
-  
+    margin: 0;
 }
-a:hover {
- 
-}
+
 
 body {
   font-family: 'Poppins', Arial, sans-serif;
   margin: 0;
-  display: flex;
-
-  
+  width: 100%;
+  height: 100vh;
+  min-height: 100%;
+  color: var(--white);
+  overflow-x:hidden;
+  overflow-y: auto;
+  scroll-behavior: smooth;
 }
 
-h1 {
-
-  line-height: 1.1;
-}
 
