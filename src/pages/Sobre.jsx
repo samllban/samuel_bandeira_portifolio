@@ -4,9 +4,12 @@ import Background from "../components/Background";
 import ButtonCurriculo from "../components/ButtonCurriculo";
 import { useEffect } from "react";
 import RedeSociais from "../components/RedeSociais";
-
+import { AdvancedImage } from "@cloudinary/react";
+import { getTransformedImage } from "../cloud/cloudinaryUtils.js";
 
 function Sobre() {
+
+    const img = getTransformedImage("foto_sobre", 500, 500);
 
     useEffect(() => {
         const startAnimation = () => {
@@ -79,8 +82,6 @@ function Sobre() {
                                 className="col-12 col-lg-6 d-flex justify-content-center justify-content-lg-end align-items-center image-animation"
                                 style={{ height: "100%" }}
                             >
-                                {/*
-
                                     <AdvancedImage
                                         cldImg={img}
                                         alt="Minha foto"
@@ -93,9 +94,6 @@ function Sobre() {
                                         className="w-100 w-lg-auto"
                                         loading="lazy"
                                     />
-                                   */
-
-                                }
                             </div>
                         </div>
                     </div>
