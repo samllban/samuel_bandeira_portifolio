@@ -1,5 +1,4 @@
 import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";  // Importando ScrollTrigger
 import NavBar from "../components/NavBar";
 import Background from "../components/Background";
 import ButtonCurriculo from "../components/ButtonCurriculo";
@@ -7,8 +6,6 @@ import { useEffect } from "react";
 import RedeSociais from "../components/RedeSociais";
 import { AdvancedImage } from "@cloudinary/react";
 import { getTransformedImage } from "../cloud/cloudinaryUtils.js";
-
-gsap.registerPlugin(ScrollTrigger); // Registrando o ScrollTrigger
 
 function Sobre() {
     const img = getTransformedImage("foto_sobre", 500, 500);
@@ -36,23 +33,6 @@ function Sobre() {
                 delay: 0.5
             });
 
-
-            gsap.registerPlugin(ScrollTrigger);
-
-            gsap.fromTo('.scroll-text', {
-                top: '100%',
-                opacity: 0,
-            }, {
-                top: '50%',
-                opacity: 1,
-                duration: 1,
-                scrollTrigger: {
-                    trigger: '.scroll-text-container',
-                    start: 'top center',
-                    end: 'bottom center',
-                    scrub: true,
-                },
-            });
         };
         startAnimation();
     }, []);
