@@ -2,6 +2,7 @@ import gsap from "gsap";
 import { useEffect, useRef } from "react";
 import { Typed } from "react-typed";
 import NavBar from "./NavBar";
+import { Link } from "react-router-dom";
 
 function Header() {
 
@@ -25,7 +26,6 @@ function Header() {
         return () => typed.destroy();
     }, []);
 
-
     useEffect(() => {
         const startInicial = () => {
             tl.fromTo(".titleSamuel",
@@ -36,43 +36,57 @@ function Header() {
                     { opacity: 1, y: 0, delay: 1 }, "-=0.75")
                 .fromTo(".buttonVamos",
                     { opacity: 0, y: 100 },
-                    { opacity: 1, y: 0 })
+                    { opacity: 1, y: 0, duration: 0.8, ease: "power2.out" })
         };
         startInicial()
     }, [tl]);
 
-
     return (
         <>
-                <section className="w-100 min-vh-100 d-flex flex-column text-center align-items-center justify-content-center pt-5">
-                    <NavBar />
-                    <div className="container-xl pt-5">
-                        {/* Texto abaixo da foto */}
-                        <div className="text-light ">
-                            <h1 className=" mb-4 fw-bold display-1 titleSamuel">SAMUEL BANDEIRA</h1>
-                            <p className="lead font-light display-4 d-inline fs-2 fs-sm-1 fs-md-3 fs-lg-3 fs-xl-5">
-                                Desenvolvedor{" "}
-                                <span className="text-primary" ref={el} lang="en">Full&nbsp;Stack</span>
-                            </p>
-                        </div>
-
-                        <div className="p-3 tituloSite">
-                            <p className="fs-5 fs-sm-5 fs-md-4 fs-lg-3 text-white-50 ">
-                                Sites que engajam e impulsionam seu negócio para o próximo nível
-                            </p>
-                        </div>
-
-                        <button className="btn py-2 px-3 position-relative mt-5 custom-btn buttonVamos" style={{ border: '3px solid rgba(0, 123, 255, 0.5)' }}>
-                            <div className="d-inline-block text-center text-md">
-                                <div className="py-1">
-                                    <p className="m-0 fw-semibold pb-1">Vamos Conversar</p>
-                                </div>
-                            </div>
-                        </button>
-
+            <section className="w-100 min-vh-100 d-flex flex-column text-center align-items-center justify-content-center pt-5">
+                <NavBar />
+                <div className="container-xl pt-5">
+                    {/* Texto abaixo da foto */}
+                    <div className="text-light ">
+                        <h1 className=" mb-4 fw-bold display-1 titleSamuel">SAMUEL BANDEIRA</h1>
+                        <p className=" buttonVamos lead font-light display-4 d-inline fs-2 fs-sm-1 fs-md-3 fs-lg-3 fs-xl-5">
+                            Desenvolvedor{" "}
+                            <span className="text-primary" ref={el} lang="en">Full&nbsp;Stack</span>
+                        </p>
                     </div>
-                </section>
-            
+
+                    <div className="p-3 tituloSite">
+                        <p className="fs-5 fs-sm-5 fs-md-4 fs-lg-3 text-white-50 ">
+                            Sites que engajam e impulsionam seu negócio para o próximo nível
+                        </p>
+                    </div>
+
+                    <Link to="/contato">
+                        <button
+                            className="btn py-3 px-4 text-white position-relative mt-5 custom-btn rounded-pill fw-bold shadow-lg "
+                            style={{
+                                background: "linear-gradient(135deg, #004080, #0080ff)", // Gradiente azul vibrante
+                                fontSize: "1.2rem",
+                                letterSpacing: "1px",
+                                transition: "0.3s ease-in-out",
+                                boxShadow: "0 4px 10px rgba(0, 128, 255, 0.3)", // Sombra azul suave
+                                border: "none",
+                                cursor: "pointer",
+                            }}
+                            onMouseOver={(e) => {
+                                e.target.style.transform = "scale(1.05)";
+                                e.target.style.boxShadow = "0 6px 15px rgba(0, 128, 255, 0.5)"; // Sombra mais intensa no hover
+                            }}
+                            onMouseOut={(e) => {
+                                e.target.style.transform = "scale(1)";
+                                e.target.style.boxShadow = "0 4px 10px rgba(0, 128, 255, 0.3)";
+                            }}
+                        >
+                            Vamos Conversar
+                        </button>
+                    </Link>
+                </div>
+            </section>
         </>
     );
 };

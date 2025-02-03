@@ -85,12 +85,12 @@ function NavBar() {
 
                     <div className="overlay-transition"></div>
 
-                    <div className="offcanvas-body d-flex flex-column justify-content-center align-items-center">
-                        <ul className="navbar-nav text-center">
+                    <div className="offcanvas-body d-flex flex-column justify-content-center align-items-center ">
+                        <ul className="navbar-nav text-center ">
                             {navLinks.map((link, index) => (
-                                <li className="nav-item my-3" key={index}>
+                                <li className="nav-item my-3 nav-linked" key={index}>
                                     <Link
-                                        className="nav-link text-light"
+                                        className="nav-link text-light nav-hover "
                                         to={link.path}
                                         onClick={(e) => {
                                             e.preventDefault();
