@@ -9,7 +9,7 @@ function CurriculoButton() {
     return (
         <div className="container d-flex justify-content-center align-items-center">
             <button
-                className="btn btn-lg py-2 px-5 text-white bg-primary "
+                className="btn btn-lg py-3 px-5 text-white bg-primary "
                 onClick={handleDownload}
             >
                 Currículo
