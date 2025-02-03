@@ -77,3 +77,33 @@
   width: 100%;
   left: 0;
 }
+
+
+/* Estiliza a tela de transição */
+/* Tela preta cobrindo toda a tela inicialmente */
+.transition-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: black; /* ou outra cor que combine */
+  z-index: 100;
+  transition: transform 0.8s ease-in-out;
+  transform: translateY(100%);
+}
+
+.transition-overlay.active {
+  transform: translateY(0);
+}
+
+/* Animação para sumir */
+@keyframes fadeOut {
+  0% {
+      opacity: 1;
+  }
+  100% {
+      opacity: 0;
+      visibility: hidden;
+  }
+}
