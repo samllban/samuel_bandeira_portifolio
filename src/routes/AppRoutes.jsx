@@ -3,7 +3,8 @@ import Home from "../pages/Home";
 import Servicos from "../pages/Servicos";
 import Sobre from "../pages/Sobre";
 import Contato from "../pages/Contato";
-import Preloader from "../components/preload";
+import Preloader from "../components/Preload";
+
 import { useState, useEffect } from "react";
 
 const AppRoutes = () => {
@@ -34,7 +35,6 @@ const AppRoutes = () => {
     return (
         <>
             {loading && <Preloader />} {/* Exibe Preloader rapidamente */}
-            
             {/* Tela preta de transição */}
             <div className={`transition-overlay ${showOverlay ? "active" : ""}`}></div>
 
