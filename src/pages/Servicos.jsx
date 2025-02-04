@@ -37,7 +37,7 @@ const cardsData = [
     {
         icon: <FaDesktop size={50} className="text-light mb-3" />,
         title: "Design Unicos UX/UI",
-        text: "Todo site é unico, por isso pra cada trabalho feito o site terá um design que melhor se adapte a personalidaade do cliente .",
+        text: "Todo site é unico, por isso pra cada trabalho feito, o site terá um design que melhor se adapte a personalidaade do cliente .",
     },
     {
         icon: <FaHeadset size={50} className="text-light mb-3" />,

@@ -67,8 +67,6 @@ const icons = [
 // Duplicando os ícones para garantir a rotação contínua sem pausa
 const extendedIcons = [...icons, ...icons];
 
-
-
 function ScrollTec() {
     return (
         <div
