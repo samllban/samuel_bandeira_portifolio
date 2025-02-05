@@ -12,10 +12,9 @@ function Sobre() {
 
     useEffect(() => {
         const startAnimation = () => {
-            // Animações iniciais para o título e imagem
             gsap.fromTo(".title-animation", {
                 opacity: 0,
-                x: -100
+                x: -50 // Reduzido para evitar overflow
             }, {
                 opacity: 1,
                 x: 0,
@@ -25,14 +24,13 @@ function Sobre() {
 
             gsap.fromTo(".image-animation", {
                 opacity: 0,
-                x: 100
+                x: 50 // Reduzido para evitar overflow
             }, {
                 opacity: 1,
                 x: 0,
                 duration: 0.5,
                 delay: 0.5
             });
-
         };
         startAnimation();
     }, []);
@@ -41,7 +39,7 @@ function Sobre() {
         <>
             <Background>
                 <NavBar />
-                <div className="container-fluid px-3 px-md-5 mb-5" style={{ paddingTop: "120px" }}>
+                <div className="container-fluid px-3 px-md-5 mb-5" style={{ paddingTop: "120px", overflowX: "hidden" }}>
                     {/* Cabeçalho sobre mim */}
                     <div className="text-center mb-1 p-3">
                         <h2 className="fw-normal text-primary fs-5 fs-lg-3">Um pouco</h2>
@@ -53,7 +51,7 @@ function Sobre() {
                             {/* Coluna do Texto */}
                             <div
                                 className="col-12 col-lg-6 pb-5 pb-lg-0 text-white text-start d-flex flex-column justify-content-between title-animation"
-                                style={{ height: "100%", paddingTop: "20px" }} // Ajustando o padding
+                                style={{ height: "100%", paddingTop: "20px" }}
                             >
                                 <h2 className="fw-bold fs-2 lh-base text-wrap">
                                     Fala! Me chamo Samuel Bandeira
@@ -96,9 +94,9 @@ function Sobre() {
                                     alt="Minha foto"
                                     style={{
                                         objectFit: "cover",
-                                        maxWidth: "80%",
+                                        maxWidth: "80%", 
                                         height: "auto",
-                                        borderRadius: "8px ",
+                                        borderRadius: "8px",
                                     }}
                                     className="w-100 w-lg-auto"
                                     loading="lazy"
