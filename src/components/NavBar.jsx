@@ -57,6 +57,7 @@ function NavBar() {
                 <button
                     className="navbar-toggler border-0"
                     type="button"
+                    aria-label="Abrir menu de navegação"
                     data-bs-toggle="offcanvas"
                     data-bs-target="#offcanvasNavbar"
                     aria-controls="offcanvasNavbar"

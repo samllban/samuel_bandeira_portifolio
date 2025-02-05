@@ -48,8 +48,6 @@ LazyIcon.propTypes = {
 
 // Adicionando o displayName
 LazyIcon.displayName = 'LazyIcon'
-// Adicionando o displayName
-LazyIcon.displayName = 'LazyIcon';
 
 const icons = [
     { id: 1, name: "React", icon: reactIcon },
@@ -75,7 +73,7 @@ function ScrollTec() {
                 height: "300px"
             }}
         >
-            <h3 className="text-center text-white fw-light"> Habilidades</h3>
+            <h2 className="text-center text-white fw-light"> Habilidades</h2>
             <hr className="border-1 border-white mx-auto" style={{ width: '50%' }} />
 
             <Swiper
@@ -112,6 +110,7 @@ function ScrollTec() {
                         <img
                             src={icon.icon}
                             alt={icon.name}
+                            aria-label={icon.name}
                             className="mx-2"
                             style={{
                                 width: '70px', // Tamanho do ícone para dispositivos grandes
