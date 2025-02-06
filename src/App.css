@@ -90,3 +90,19 @@
       visibility: hidden;
   }
 }
+
+.h1display {
+  font-size: 84px;
+}
+
+@media (max-width: 768px) {
+  .h1display {
+      font-size: 64px;
+  }
+}
+
+@media (max-width: 576px) {
+  .h1display {
+      font-size: 34px;
+  }
+}

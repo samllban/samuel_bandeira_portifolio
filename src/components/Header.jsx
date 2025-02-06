@@ -48,8 +48,8 @@ function Header() {
                 <div className="container-xl pt-5">
                     {/* Texto abaixo da foto */}
                     <div className="text-light ">
-                        <h1 className=" mb-4 fw-bold display-1 titleSamuel">SAMUEL BANDEIRA</h1>
-                        <p className=" buttonVamos lead font-light display-4 d-inline fs-2 fs-sm-1 fs-md-3 fs-lg-3 fs-xl-5">
+                        <h1 className="mb-2fw-bold text-nowrap h1display titleSamuel">SAMUEL BANDEIRA</h1>
+                        <p className="buttonVamos lead font-light d-inline fs-1 fs-sm-1 fs-md-3 fs-lg-3 fs-xl-5">
                             Desenvolvedor{" "}
                             <span className="text-primary" ref={el} lang="en">Full&nbsp;Stack</span>
                         </p>
